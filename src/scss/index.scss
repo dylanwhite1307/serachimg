@@ -1,0 +1,81 @@
+/**** NULL STYLES ****/
+
+@import "nullstyle.scss";
+
+/**** ALL STYLES ****/
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  background: rgb(245, 244, 244);
+}
+
+/**** FORM ****/
+.app-form{
+  @include flexbox;
+  justify-content: center;
+  padding-top: 10px;
+  input, button{
+    color: white;
+    padding: 7.5px;
+    border-radius: 5px;
+    margin: 0 4px;
+  }
+  input{
+    color: rgb(88, 88, 88);
+    background: rgb(245, 244, 244);
+    font-size: 15px;
+  }
+}
+.app-form-input_tag{
+  border: 1px solid rgb(88, 88, 88);
+}
+.app-form-btn_upload{
+  background: rgba($color: #47af43, $alpha: 1.0);
+}
+.app-form-btn_upload:disabled,.app-form-btn_clean:disabled, .fetch_active{
+  background: rgba($color: #676867, $alpha: 1.0);
+}
+.app-form-btn_clean{
+  background: rgba($color: #c52e2e, $alpha: 1.0);
+}
+.app-form-btn_group{
+  background: rgba($color: #682ec5, $alpha: 1.0);
+}
+.app-form-btn_ungroup{
+  background: rgba($color: #dd912e, $alpha: 1.0);
+}
+
+.none{
+  display: none
+}
+
+/**** APP IMAGE LIST ****/
+
+.app-image-list{
+  margin: 10px;
+  @include flexbox;
+  font-size: 14px;
+  flex-wrap:wrap
+}
+
+.imgLoaded{
+  padding: 4px;
+  border: 2px solid grey;
+  margin: 2px;
+  @include flexbox;
+  img{
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+  }
+}
+
+.section_active{
+  flex-direction: column;
+  .imgLoaded{
+    display: inline-block;
+  }
+  h3{
+    font-size: 32px;
+  }
+}
+
